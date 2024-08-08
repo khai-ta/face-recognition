@@ -41,7 +41,7 @@ def process_frames():
 
         if ret:
             # check face match every 60 frames
-            if counter % 120 == 0:
+            if counter % 60 == 0:
                 try:
                     # Start a new thread to process face matching
                     threading.Thread(target=check_face, args=(frame.copy(),)).start()
