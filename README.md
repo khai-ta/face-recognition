@@ -2,7 +2,7 @@ This Python script captures video frames from a camera and checks if the face in
 
 ## Features
 - **Real-Time Face Matching**: The script uses the DeepFace library to compare the face in the video frame with a reference image.
-- **Multi-threading**: Face matching is processed in a separate thread every 60 frames to maintain performance.
+- **Multi-threading**: Face matching is processed in a separate thread every 30 frames to maintain performance.
 - **Interactive Display**: The video stream displays "MATCH" if the face matches the reference image, otherwise "NO MATCH". Press `q` to exit the script.
 
 ## Prerequisites
@@ -40,7 +40,7 @@ This Python script captures video frames from a camera and checks if the face in
 - The script initializes the video capture object for the default camera and sets the video frame dimensions.
 - It reads and stores the reference image.
 - A continuous loop captures frames from the camera feed and processes them.
-- Every 60 frames, the script checks if the face in the current frame matches the reference image. This is done in a separate thread to avoid blocking the video feed.
+- Every 30 frames, the script checks if the face in the current frame matches the reference image. This is done in a separate thread to avoid blocking the video feed.
 - The result ("MATCH" or "NO MATCH") is displayed on the video feed.
 
 ## Notes
