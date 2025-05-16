@@ -4,35 +4,40 @@ This Python application captures video frames from a camera and checks if the fa
 
 ## Features
 
-- Real-Time Face Matching: Uses the DeepFace library to compare the face in the video frame with a reference image
-- Multi-threading: Face matching is processed in a separate thread every 30 frames to maintain performance
-- Interactive Display: The video stream displays "MATCH" if the face matches the reference image, otherwise "NO MATCH". Press q to exit the script
+- **Real-Time Face Detection**: Utilizes advanced deep learning models for accurate face detection
+- **Face Recognition**: Implements sophisticated face recognition algorithms for identity verification
+- **Multi-threading Support**: Optimized performance through parallel processing
+- **Video Stream Processing**: Real-time video feed analysis with minimal latency
+- **Configurable Settings**: Easy-to-use configuration system for customizing recognition parameters
+- **Extensible Architecture**: Modular design for easy integration and extension
 
 ## Prerequisites
 
-- Python 3.6+
+- Python 3.8+
 - OpenCV (cv2)
 - DeepFace
-- A reference image named reference.jpg in the same directory as the script
+- Other dependencies listed in `requirements.txt`
 
 ## Installation
 
-1. Clone the repository or download the source code
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/face-recognition.git
+cd face-recognition
+```
 
-2. Install the required Python packages:
+2. Install the required packages:
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Ensure you have a camera connected to your system
-
 ## Usage
 
-1. Place your reference image in the same directory as the script and name it reference.jpg
+1. Place your reference image in the project directory (default: `reference.jpg`)
 
-2. Run the script:
+2. Run the face recognition system:
 ```bash
-python -m src.core.face_recognition
+python -m src.app.main
 ```
 
 The video feed from your camera will appear in a window. The script will display "MATCH" or "NO MATCH" depending on whether it finds a matching face in the frame.
