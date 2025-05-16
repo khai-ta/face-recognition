@@ -22,7 +22,7 @@ class FaceRecognitionSystem:
         """
         self.video = VideoCapture(camera_id)
         self.detector = FaceDetector()
-        self.recognizer = FaceRecognizer(reference_image_path)
+        self.recognizer = FaceRecognizer(reference_image_path, confidence_threshold=0.6)
         self.counter = 0
         self.face_match = False
         self.last_face_position: Optional[Tuple[int, int, int, int]] = None
@@ -48,7 +48,7 @@ class FaceRecognitionSystem:
         self.counter += 1
 
         # Draw results
-        frame = draw_face_box(frame, self.last_face_position, self.face_match)
+        frame = draw_face_box(frame, self.last_face_position, self.face_match, self.video.fps)
         cv2.imshow('Face Recognition', frame)
 
     def _check_face(self, frame: np.ndarray) -> None:

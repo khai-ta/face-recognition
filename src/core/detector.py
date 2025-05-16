@@ -27,6 +27,10 @@ class FaceDetector:
         """
         gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         faces = self.face_cascade.detectMultiScale(
-            gray_frame, scaleFactor=1.1, minNeighbors=5
+            gray_frame,
+            scaleFactor=1.05,
+            minNeighbors=6,
+            minSize=(30, 30),
+            maxSize=(300, 300)
         )
         return faces[0] if len(faces) > 0 else None 
