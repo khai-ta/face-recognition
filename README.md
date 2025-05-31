@@ -2,15 +2,6 @@
 
 This Python application captures video frames from a camera and checks if the face in each frame matches a reference image using the DeepFace library. It continuously processes the video stream in real-time, displaying either "MATCH" or "NO MATCH" based on the comparison result.
 
-## Features
-
-- **Real-Time Face Detection**: Utilizes advanced deep learning models for accurate face detection
-- **Face Recognition**: Implements sophisticated face recognition algorithms for identity verification
-- **Multi-threading Support**: Optimized performance through parallel processing
-- **Video Stream Processing**: Real-time video feed analysis with minimal latency
-- **Configurable Settings**: Easy-to-use configuration system for customizing recognition parameters
-- **Extensible Architecture**: Modular design for easy integration and extension
-
 ## Prerequisites
 
 - Python 3.8+
