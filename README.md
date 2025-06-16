@@ -9,19 +9,6 @@ This Python application captures video frames from a camera and checks if the fa
 - DeepFace
 - Other dependencies listed in `requirements.txt`
 
-## Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/face-recognition.git
-cd face-recognition
-```
-
-2. Install the required packages:
-```bash
-pip install -r requirements.txt
-```
-
 ## Usage
 
 1. Place your reference image in the project directory (default: `reference.jpg`)
